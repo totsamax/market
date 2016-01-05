@@ -1,0 +1,32 @@
+@import "_bootstrap.scss";
+$fonts-path : 'fonts/';
+@font-face {
+	font-family: 'mullerextrabold';
+	src: url($fonts-path+'fonts/muller_extrabold.eot');
+	src: url($fonts-path+'fonts/muller_extrabold.eot?#iefix') format('embedded-opentype'), url($fonts-path+'muller_extrabold.woff2') format('woff2'), url('muller_extrabold.woff') format('woff'), url('muller_extrabold.ttf') format('truetype'), url('muller_extrabold.svg#mullerextrabold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'mullermedium';
+	src: url($fonts-path+'muller_medium.eot');
+	src: url($fonts-path+'medium.eot?#iefix') format('embedded-opentype'), url($fonts-path+'muller_medium.woff2') format('woff2'), url('muller_medium.woff') format('woff'), url('muller_medium.ttf') format('truetype'), url('muller_medium.svg#mullermedium') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'mullerlight';
+    src: url($fonts-path+'muller_light_0-webfont.eot');
+    src: url($fonts-path+'muller_light_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url($fonts-path+'muller_light_0-webfont.woff2') format('woff2'),
+         url($fonts-path+'muller_light_0-webfont.woff') format('woff'),
+         url($fonts-path+'muller_light_0-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1 {
+    font: 40px/40px mullerlight;
+}
