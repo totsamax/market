@@ -1,32 +1,100 @@
+@import "_vars";
 @import "_bootstrap.scss";
-$fonts-path : 'fonts/';
-@font-face {
-	font-family: 'mullerextrabold';
-	src: url($fonts-path+'fonts/muller_extrabold.eot');
-	src: url($fonts-path+'fonts/muller_extrabold.eot?#iefix') format('embedded-opentype'), url($fonts-path+'muller_extrabold.woff2') format('woff2'), url('muller_extrabold.woff') format('woff'), url('muller_extrabold.ttf') format('truetype'), url('muller_extrabold.svg#mullerextrabold') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+@import "_custom-ui-elements";
+@import "_fonts";
 
-@font-face {
-	font-family: 'mullermedium';
-	src: url($fonts-path+'muller_medium.eot');
-	src: url($fonts-path+'medium.eot?#iefix') format('embedded-opentype'), url($fonts-path+'muller_medium.woff2') format('woff2'), url('muller_medium.woff') format('woff'), url('muller_medium.ttf') format('truetype'), url('muller_medium.svg#mullermedium') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-    font-family: 'mullerlight';
-    src: url($fonts-path+'muller_light_0-webfont.eot');
-    src: url($fonts-path+'muller_light_0-webfont.eot?#iefix') format('embedded-opentype'),
-         url($fonts-path+'muller_light_0-webfont.woff2') format('woff2'),
-         url($fonts-path+'muller_light_0-webfont.woff') format('woff'),
-         url($fonts-path+'muller_light_0-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
 
+
+*{
+    font: 12px/24px mullerlight, arial;
+    letter-spacing: 1px;
+    color: $main-color_gray;
+}
+html{
+    position: relative;
+    min-height: 100%;
+}
+body{
+    margin-bottom: $footer-height;
+    >.container{
+        margin-top:$header-height;
+    }
+}
+a,a:visited{
+    color: $main-color_gray;
+}
+a:hover{
+   color:$main-color_blue;
+   text-decoration: none; 
 }
 
 h1 {
     font: 40px/40px mullerlight;
+}
+.header-tel{
+    height: 48px;
+    border-bottom:1px solid #bdbdbd;
+    text-align: center;
+    text-transform: uppercase;
+    >*{
+        line-height: 48px;
+    vertical-align: middle;
+    }
+}
+.header-bottom{
+    height: 52px;
+}
+.header-logo{
+    background: url();
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $footer-height;
+    >.container{
+            padding-bottom: 109px; 
+    padding-top: 77px;
+        text-align: center;
+    } 
+    .region-selector{
+        margin-bottom: 24px;
+        .region-selector__label{
+            font-weight: 200;
+            color: $main-color_gray;
+            margin: 0;
+            padding: 0; 
+        }
+        #region-selector__select{
+            font: bold 12px/24px mullermedium;
+            line-height: 24px;
+            cursor: pointer;
+        }
+    }
+    .footer-links{
+        list-style: none;
+        .footer-links__item{
+            display: inline-block;
+                padding-left: 16px;
+            a,a:visited{
+                color:$main-color_gray-light;
+            }
+            a:hover{
+                color: $main-color_blue;
+            }
+        }
+        .footer-links__item::after{
+            content: '/';
+            display: inline-block;
+            padding-left: 16px;
+        }
+        .footer-links__item:last-child:after{
+            content: '';
+        }
+    }
+    .footer-copyrights,.footer-copyrights span{
+        color: $main-color_gray-light;
+    }
 }

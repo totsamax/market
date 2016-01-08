@@ -238,8 +238,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+  src: url("fonts/glyphicons-halflings-regular.eot");
+  src: url("fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("fonts/glyphicons-halflings-regular.woff") format("woff"), url("fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 
 .glyphicon {
   position: relative;
@@ -5817,10 +5817,25 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.custom-select {
+  border: none;
+  display: inline-block; }
+  .custom-select .custom-select__button {
+    background: #fff;
+    border: none; }
+  .custom-select .caret {
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    margin-left: 2px;
+    vertical-align: middle;
+    background: url("../img/ui/dropdown_caret.png");
+    border: none; }
+
 @font-face {
   font-family: 'mullerextrabold';
-  src: url("fonts/fonts/muller_extrabold.eot");
-  src: url("fonts/fonts/muller_extrabold.eot?#iefix") format("embedded-opentype"), url("fonts/muller_extrabold.woff2") format("woff2"), url("muller_extrabold.woff") format("woff"), url("muller_extrabold.ttf") format("truetype"), url("muller_extrabold.svg#mullerextrabold") format("svg");
+  src: url("fonts/muller_extrabold.eot");
+  src: url("fonts/muller_extrabold.eot?#iefix") format("embedded-opentype"), url("fonts/muller_extrabold.woff2") format("woff2"), url("muller_extrabold.woff") format("woff"), url("muller_extrabold.ttf") format("truetype"), url("muller_extrabold.svg#mullerextrabold") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -5838,5 +5853,79 @@ button.close {
   font-weight: normal;
   font-style: normal; }
 
+* {
+  font: 12px/24px mullerlight, arial;
+  letter-spacing: 1px;
+  color: #7d7d7d; }
+
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  margin-bottom: 292px; }
+  body > .container {
+    margin-top: 101px; }
+
+a, a:visited {
+  color: #7d7d7d; }
+
+a:hover {
+  color: #0092dc;
+  text-decoration: none; }
+
 h1 {
   font: 40px/40px mullerlight; }
+
+.header-tel {
+  height: 48px;
+  border-bottom: 1px solid #bdbdbd;
+  text-align: center;
+  text-transform: uppercase; }
+  .header-tel > * {
+    line-height: 48px;
+    vertical-align: middle; }
+
+.header-bottom {
+  height: 52px; }
+
+.header-logo {
+  background: url(url(); }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 292px; }
+  footer > .container {
+    padding-bottom: 109px;
+    padding-top: 77px;
+    text-align: center; }
+  footer .region-selector {
+    margin-bottom: 24px; }
+    footer .region-selector .region-selector__label {
+      font-weight: 200;
+      color: #7d7d7d;
+      margin: 0;
+      padding: 0; }
+    footer .region-selector #region-selector__select {
+      font: bold 12px/24px mullermedium;
+      line-height: 24px;
+      cursor: pointer; }
+  footer .footer-links {
+    list-style: none; }
+    footer .footer-links .footer-links__item {
+      display: inline-block;
+      padding-left: 16px; }
+      footer .footer-links .footer-links__item a, footer .footer-links .footer-links__item a:visited {
+        color: #bfbfbf; }
+      footer .footer-links .footer-links__item a:hover {
+        color: #0092dc; }
+    footer .footer-links .footer-links__item::after {
+      content: '/';
+      display: inline-block;
+      padding-left: 16px; }
+    footer .footer-links .footer-links__item:last-child:after {
+      content: ''; }
+  footer .footer-copyrights, footer .footer-copyrights span {
+    color: #bfbfbf; }

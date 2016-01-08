@@ -1,11 +1,89 @@
 <!doctype html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ru"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="ru"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Категории</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--[if lt IE 9]>
+<link rel="stylesheet" href="css/ie-landing.css">
+<script src="js/vendor/html5shiv.min.js"></script>
+<script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+
 </head>
+
 <body>
-    <h1>Почта Маркет Document</h1>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-sm-12 col-md-12 header-tel"><span>Заказ товаров по тел. <strong>8-800-755-255</strong></span></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 header-bottom">
+
+                    <form class="searchbox pull-left">
+                        <input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();" required>
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </form>
+
+                    <div class="header-logo"></div>
+                </div>
+                <div class="col-sm-6 col-md-6"></div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="region-selector">
+                <label class="region-selector__label" for="region-selector__select">Регион:</label>
+
+                <div class="dropdown custom-select">
+                    <button class=" dropdown-toggle custom-select__button" type="button" id="region-selector__select" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="true">
+                        Москва
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="region-selector__select">
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Москва</a></li>
+                        <li><a href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="footer-links">
+                <li class="footer-links__item"><a href="">Публичная оферта</a></li>
+                <li class="footer-links__item"><a href="">Оплата</a></li>
+                <li class="footer-links__item"><a href="">Доставка</a></li>
+                <li class="footer-links__item"><a href="">Гарантия</a></li>
+                <li class="footer-links__item"><a href="">Контакты</a></li>
+            </ul>
+            <div class="footer-copyrights">
+                <span class="red">&copy; Почтамаркет, 2015</span>
+            </div>
+        </div>
+    </footer>
 </body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js "></script>
+<script>
+    window.jQuery || document.write('<script src="js/vendor/jquery.min.js "><\/script>')
+
+</script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/main.js "></script>
+
 </html>

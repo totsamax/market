@@ -1,0 +1,17 @@
+.custom-select{
+    border: none;
+    display: inline-block;
+    .custom-select__button{
+        background: #fff;
+        border:none;
+    }
+    .caret {
+        display: inline-block;
+        width: 10px;
+        height: 5px;
+        margin-left: 2px;
+        vertical-align: middle;
+        background: url("../img/ui/dropdown_caret.png");
+        border:none;
+    }
+}
