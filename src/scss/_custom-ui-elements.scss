@@ -1,3 +1,4 @@
+//////////////Custom select/////////////
 .custom-select{
     border: none;
     display: inline-block;
@@ -15,3 +16,59 @@
         border:none;
     }
 }
+//////////////Overfolow/////////
+.overflow{
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+  &:hover {
+    text-overflow: clip;
+    max-width: 100%;
+    
+    &::after {
+    background: none;
+    }
+    
+  }
+  
+  &::after {
+    content: "";
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 56%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(56%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 56%,rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 56%,rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 56%,rgba(255,255,255,1) 100%);
+    background: linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 56%,rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+  }
+              @media (min-width: $screen-sm-min) {
+              &::after {
+                content: "";
+                display: none;
+            }
+               
+            }
+}
+
+//////////////Header-search////////////
+.searchbox{
+    display: inline-block;
+    height:18px;
+    line-height: 52px;    
+    .searchbox-input{
+        box-sizing:border-box;
+        border:1px solid $main-color_gray-light;
+        width:0px;
+        display:  none;    
+    }
+  
+     
+}
+
