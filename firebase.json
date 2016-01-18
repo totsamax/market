@@ -1,0 +1,9 @@
+{
+  "firebase": "market-verstka",
+  "public": "build",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
