@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic);
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,300,300italic,400italic,700italic");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6015,43 +6015,13 @@ button.close {
     width: 0px;
     display: none; }
 
-@font-face {
-  font-family: 'mullerextrabold';
-  src: url("fonts/muller_extrabold.eot");
-  src: url("fonts/muller_extrabold.eot?#iefix") format("embedded-opentype"), url("fonts/muller_extrabold.woff2") format("woff2"), url("muller_extrabold.woff") format("woff"), url("muller_extrabold.ttf") format("truetype"), url("muller_extrabold.svg#mullerextrabold") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'mullermedium';
-  src: url("fonts/muller_medium.eot");
-  src: url("fonts/medium.eot?#iefix") format("embedded-opentype"), url("fonts/muller_medium.woff2") format("woff2"), url("muller_medium.woff") format("woff"), url("muller_medium.ttf") format("truetype"), url("muller_medium.svg#mullermedium") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'mullerlight';
-  src: url("fonts/muller_light_0-webfont.eot");
-  src: url("fonts/muller_light_0-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/muller_light_0-webfont.woff2") format("woff2"), url("fonts/muller_light_0-webfont.woff") format("woff"), url("fonts/muller_light_0-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'mullerbold';
-  src: url("fonts/muller_bold_0-webfont.eot");
-  src: url("fonts/muller_bold_0-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/muller_bold_0-webfont.woff2") format("woff2"), url("fonts/muller_bold_0-webfont.woff") format("woff"), url("fonts/muller_bold_0-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-* {
-  font: 400 18px/24px Roboto;
-  color: #333; }
-
 html {
   position: relative;
   min-height: 100%; }
 
 body {
+  font: 400 18px/24px Roboto;
+  color: #333;
   margin-bottom: 102px; }
   body > .container {
     margin-top: 101px; }
@@ -6072,8 +6042,12 @@ h2 {
   font: 400 22px / 26px Roboto; }
 
 .container {
-  padding-left: 64px !important;
-  padding-right: 64px !important; }
+  padding-left: 40px !important;
+  padding-right: 40px !important; }
+  @media (min-width: 768px) {
+    .container {
+      padding-left: 64px !important;
+      padding-right: 64px !important; } }
 
 .header-default {
   background-color: #f7f7f7; }
@@ -6109,9 +6083,12 @@ h2 {
   .header-search-logo .glyphicon {
     font-size: 18px;
     position: absolute;
-    left: -41px;
+    left: -30px;
     top: 15px;
     color: #0055a6; }
+    @media (min-width: 768px) {
+      .header-search-logo .glyphicon {
+        left: -41px; } }
   .header-search-logo .header-logo {
     display: inline-block;
     background: url("../img/logo-header.png");
@@ -6123,9 +6100,14 @@ h2 {
   .header-cart .header-cart__icon {
     width: 22px;
     height: 17px;
-    background: url(../img/icons/icon-cart-header.png) center no-repeat;
+    background: url("../img/icons/icon-cart-header.png") center no-repeat;
     display: inline-block;
     margin-right: 0px; }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      .header-cart .header-cart__icon {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url("../img/icons/icon-cart-header@2x.png");
+        background-size: 22px 17px; } }
     @media (min-width: 480px) {
       .header-cart .header-cart__icon {
         margin-right: 10px; } }
@@ -6178,18 +6160,19 @@ h2 {
     padding-right: 0px; } }
 
 .catalog-banner {
+  margin-bottom: 15px;
+  overflow: hidden;
   box-shadow: 0px 2px 0.96px 0.04px rgba(26, 27, 30, 0.33);
   height: 608px; }
   .catalog-banner:hover {
     box-shadow: 0px 3px 6px 0px #b3b3b3; }
   .catalog-banner {
-    background: url("../img/banner.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%; }
     .catalog-banner > img {
-      max-width: 100%;
-      max-height: 100%;
+      min-width: 100%;
+      min-height: 100%;
       vertical-align: middle; }
 
 .catalog-item__image {
@@ -6274,24 +6257,58 @@ h2 {
     color: #0055a6;
     font: 400 18px / 24px Roboto; }
 
-.category-item {
+.category > div {
+  padding: 1px; }
+
+.category .category-item {
+  text-align: center;
   overflow: hidden;
-  margin-bottom: 12px;
   width: 100%;
-  height: 100%; }
-  .category-item img {
+  height: auto; }
+  @media (min-width: 480px) {
+    .category .category-item {
+      height: 130px; } }
+  @media (min-width: 768px) {
+    .category .category-item {
+      height: 158px; } }
+  @media (min-width: 992px) {
+    .category .category-item {
+      height: 213px; } }
+  @media (min-width: 1200px) {
+    .category .category-item {
+      height: 174.656px; } }
+  @media (min-width: 1560px) {
+    .category .category-item {
+      height: 239.656px; } }
+  .category .category-item img {
     min-width: 100%;
-    min-height: 100%; }
-  .category-item.hx1 {
-    height: 295px; }
-  .category-item.hx2 {
-    height: 590px; }
-  .category-item .category-item__title {
+    min-height: 100%;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  @media (min-width: 480px) {
+    .category .category-item.hx2 {
+      height: 260px; } }
+  @media (min-width: 768px) {
+    .category .category-item.hx2 {
+      height: 316px; } }
+  @media (min-width: 992px) {
+    .category .category-item.hx2 {
+      height: 426px; } }
+  @media (min-width: 1200px) {
+    .category .category-item.hx2 {
+      height: 349.312px; } }
+  @media (min-width: 1560px) {
+    .category .category-item.hx2 {
+      height: 479.312px; } }
+  .category .category-item .category-item__title {
     color: #ffffff;
     font: 300 40px / 48px Roboto;
     position: absolute;
-    bottom: 26px;
-    left: 26px; }
+    bottom: 2%;
+    left: 2%; }
 
 footer {
   position: absolute;

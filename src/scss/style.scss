@@ -3,10 +3,7 @@
 @import "_bootstrap-sass-xl.scss";
 @import "_custom-ui-elements";
 @import "_fonts";
-* {
-    font: $roboto;
-    color: $main-color_gray;
-}
+@import "_mixins";
 
 html {
     position: relative;
@@ -14,6 +11,8 @@ html {
 }
 
 body {
+    font: $roboto;
+    color: $main-color_gray;
     margin-bottom: $footer-height;
     >.container {
         margin-top: $header-height;
@@ -40,8 +39,12 @@ h2 {
 }
 
 .container {
-    padding-left: 64px!important;
-    padding-right: 64px!important;
+    padding-left: 40px!important;
+    padding-right: 40px!important;
+    @media (min-width: $screen-sm-min) {
+            padding-left: 64px!important;
+            padding-right: 64px!important;
+    }
 }
 
 .header-default {
@@ -86,13 +89,16 @@ h2 {
     .glyphicon {
         font-size: 18px;
         position: absolute;
-        left: -41px;
+        left: -30px;
+        @media (min-width: $screen-sm-min) {
+            left: -41px;
+            }
         top: 15px;
         color: $main-color_blue;
     }
     .header-logo {
         display: inline-block;
-        background: url("../img/logo-header.png");
+        background: url($img-path+"logo-header.png");
         width: 141px;
         height: 18px;
     }
@@ -103,7 +109,8 @@ h2 {
     .header-cart__icon {
         width: 22px;
         height: 17px;
-        background: url(../img/icons/icon-cart-header.png) center no-repeat;
+        background: url($img-path+"icons/icon-cart-header.png") center no-repeat;
+        @include image-2x($img-path+"icons/icon-cart-header@2x.png", 22px, 17px);
         display: inline-block;
         margin-right: 0px;
         @media (min-width: $screen-xs-min) {
@@ -175,6 +182,8 @@ h2 {
 }
 
 .catalog-banner {
+    margin-bottom: 15px;
+    overflow: hidden;
     box-shadow: 0px 2px 0.96px 0.04px rgba(26, 27, 30, 0.33);
     &:hover {
         box-shadow: 0px 3px 6px 0px #b3b3b3;
@@ -182,13 +191,13 @@ h2 {
     height: $catalog-item__height*2+18px;
     // border: 1px solid #666;
     & {
-        background: url("../img/banner.png");
+         
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100%;
         >img {
-            max-width: 100%;
-            max-height: 100%;
+            min-width: 100%;
+            min-height: 100%;
             vertical-align: middle;
         }
     }
@@ -296,30 +305,47 @@ h2 {
         font: 400 18px / 24px Roboto;
     }
 }
-
-.category-item {
-    overflow: hidden;
-    margin-bottom: $grid-gutter-width/2;
-    img {
-        min-width: 100%;
-        min-height: 100%;
+.category{
+    
+    &>div{
+        padding: 1px;
     }
-    width:100%;
-    height:100%;
-    &.hx1 {
-        height: $catalog-item__height;
-    }
-    &.hx2 {
-        height: $catalog-item__height*2;
-    }
-    .category-item__title {
-        color: #ffffff;
-        font: 300 40px / 48px Roboto;
-        position: absolute;
-        bottom: 26px;
-        left: 26px;
-    }
+    .category-item {
+        text-align: center;
+        overflow: hidden;
+        @media (min-width: $screen-xs-min) {height: $col-w-xs;}
+        @media (min-width: $screen-sm-min) {height: $col-w-sm;}
+        @media (min-width: $screen-md-min) {height: $col-w-md;}
+        @media (min-width: $screen-lg-min) {height: $col-w-lg;}
+        @media (min-width: $screen-xl-min) {height: $col-w-xl;}
+    
+        img {
+            min-width: 100%;
+            min-height: 100%;
+            @include vertical-align();
+        }
+        width:100%;
+        height: auto;
+ 
+        &.hx2 {
+            @media (min-width: $screen-xs-min) {height: $col-w-xs*2;}
+            @media (min-width: $screen-sm-min) {height: $col-w-sm*2;}
+            @media (min-width: $screen-md-min) {height: $col-w-md*2;}
+            @media (min-width: $screen-lg-min) {height: $col-w-lg*2;}
+            @media (min-width: $screen-xl-min) {height: $col-w-xl*2;}
+        }
+        .category-item__title {
+            color: #ffffff;
+            font: 300 40px / 48px Roboto;
+            position: absolute;
+            bottom: 2%;
+            left: 2%;
+        }
+        }
+    
+    
 }
+
 
 footer {
     position: absolute;
