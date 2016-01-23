@@ -170,6 +170,11 @@ h2 {
 }
 
 .catalog {
+    >div{
+    @media (max-width: $screen-xs-min) {
+        width:100%;
+    }
+    }
     @media (min-width: $screen-xs-min) {
         &:first-child {
             padding-left: 0px;
@@ -306,34 +311,33 @@ h2 {
     }
 }
 .category{
-    
+    margin: 0 auto;
+    @media (min-width: $screen-xs-min) {}
+    @media (min-width: $screen-sm-min) {}
+    @media (min-width: $screen-md-min) {}
+    @media (min-width: $screen-lg-min) {}
+    @media (min-width: $screen-xl-min) {}
     &>div{
         padding: 1px;
     }
     .category-item {
+ 
         text-align: center;
         overflow: hidden;
-        @media (min-width: $screen-xs-min) {height: $col-w-xs;}
-        @media (min-width: $screen-sm-min) {height: $col-w-sm;}
-        @media (min-width: $screen-md-min) {height: $col-w-md;}
-        @media (min-width: $screen-lg-min) {height: $col-w-lg;}
-        @media (min-width: $screen-xl-min) {height: $col-w-xl;}
-    
+        margin: 0 auto 18px;
+        position: relative;
+        background-color: #ffffff;
+        width: $catalog-item__width;
+        height: $catalog-item__height;
+     
         img {
+            width: 100%;
+            height: 100%;
             min-width: 100%;
             min-height: 100%;
-            @include vertical-align();
+
         }
-        width:100%;
-        height: auto;
- 
-        &.hx2 {
-            @media (min-width: $screen-xs-min) {height: $col-w-xs*2;}
-            @media (min-width: $screen-sm-min) {height: $col-w-sm*2;}
-            @media (min-width: $screen-md-min) {height: $col-w-md*2;}
-            @media (min-width: $screen-lg-min) {height: $col-w-lg*2;}
-            @media (min-width: $screen-xl-min) {height: $col-w-xl*2;}
-        }
+
         .category-item__title {
             color: #ffffff;
             font: 300 40px / 48px Roboto;
@@ -341,7 +345,7 @@ h2 {
             bottom: 2%;
             left: 2%;
         }
-        }
+    }
     
     
 }
