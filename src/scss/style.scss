@@ -103,7 +103,7 @@ h2 {
     .header-cart__icon {
         width: 22px;
         height: 17px;
-        background: url(../img/icon-cart-header.png) center no-repeat;
+        background: url(../img/icons/icon-cart-header.png) center no-repeat;
         display: inline-block;
         margin-right: 0px;
         @media (min-width: $screen-xs-min) {
@@ -128,7 +128,7 @@ h2 {
             left: auto;
             right: 0;
         }
-        .caret {}
+  
         .header-cart__select-label {
             display: inline-block;
             overflow: hidden;
