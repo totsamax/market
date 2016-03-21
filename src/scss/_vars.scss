@@ -12,10 +12,13 @@ $roboto-light:300 18px / 24px Roboto;
 $roboto-bold:700 14px / 14px Roboto;
 $border-radius-base:0px;
 $catalog-item__height:295px;
-$catalog-item__width:196px;
-$col-w-xl:239.656px;
-$col-w-lg:263px;
-$col-w-md:213px;
-$col-w-sm:211px;
-$col-w-xs:130px;
+$catalog-item__width:223px;
+//$col-w-xl:239.656px;
+//$col-w-lg:263px;
+//$col-w-md:213px;
+//$col-w-sm:211px;
+//$col-w-xs:130px;
 $img-path:"../img/";
+// ----------------------------
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         20px;

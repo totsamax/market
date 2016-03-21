@@ -1,10 +1,16 @@
-@import "_vars";
+@import "_vars.scss";
 @import "_bootstrap.scss";
 @import "_bootstrap-sass-xl.scss";
 @import "_custom-ui-elements";
 @import "_fonts";
 @import "_mixins";
 @import "_card.scss";
+// ----------helpers-------
+.content-rignt {
+    text-align: right;
+}
+
+// ----------main----------
 html {
     position: relative;
     min-height: 100%;
@@ -14,9 +20,6 @@ body {
     font: $roboto;
     color: $main-color_gray;
     margin-bottom: $footer-height;
-    >.container {
-        margin-top: $header-height;
-    }
 }
 
 a,
@@ -39,113 +42,118 @@ h2 {
 }
 
 .container {
-    padding-left: 40px!important;
-    padding-right: 40px!important;
-    @media (min-width: $screen-sm-min) {
-            padding-left: 64px!important;
-            padding-right: 64px!important;
-    }
+    // padding-left: 40px!important;
+    // padding-right: 40px!important;
+    // @media (min-width: $screen-sm-min) {
+    //         padding-left: 64px!important;
+    //         padding-right: 64px!important;
+    // }
 }
 
 .header-default {
-    background-color: $body-bg;
-    >.container {
-        background-color: $body-bg;
+    background-color: #fff;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 6px 0px #b3b3b3;
+    .row>div {
+        height: 66px;
+        line-height: 66px;
     }
-    >.container-fluid {
-        background: #fff;
+    .header1 {
+        font-size: 14px;
+        font-family: "Roboto";
+        color: rgb(90, 90, 90);
+        line-height: 1.2;
+        .header-region {
+            height: 45px;
+            margin-left: 40px;
+        }
+    }
+    .header2 {
+        font-size: 18px;
+        font-family: "Roboto";
+        color: rgb(0, 159, 225);
+        line-height: 1.2;
     }
 }
 
 .header-tel {
-    height: 48px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #bdbdbd;
-    text-align: center;
     color: #878787;
-    >* {
-        line-height: 48px;
-        vertical-align: middle;
-        font: 400 14px / 48px Roboto;
-    }
-    strong {
+    vertical-align: middle;
+    span {
         font: $roboto-bold;
+        font-size: 18px;
     }
 }
 
-.header-cart,
-.header-search-logo {
-    height: 52px;
-    padding-top: 17px;
-}
-
-.header-search-logo {
+.header-logo {
     position: relative;
+    line-height: normal;
+    display: inline-block;
+    vertical-align: middle;
     a.header-search-icon,
     a.header-search-icon:visited,
     a.header-search-icon:hover {
         text-decoration: none;
     }
-    .glyphicon {
-        font-size: 18px;
-        position: absolute;
-        left: -30px;
-        @media (min-width: $screen-sm-min) {
-            left: -41px;
-            }
-        top: 15px;
-        color: $main-color_blue;
-    }
-    .header-logo {
+    // .glyphicon {
+    //     font-size: 18px;
+    //     position: absolute;
+    //     left: -30px;
+    //     @media (min-width: $screen-sm-min) {
+    //         left: -41px;
+    //         }
+    //     top: 15px;
+    //     color: $main-color_blue;
+    // }
+    .header-logo__img {
         display: inline-block;
         background: url($img-path+"logo-header.png");
-        width: 141px;
-        height: 18px;
+        background-repeat: no-repeat;
+        width: 201px;
+        height: 20px;
+        line-height: normal;
+        vertical-align: middle;
     }
+}
+
+.header-login {
+    margin-right: 35px;
+ 
 }
 
 .header-cart {
     display: inline-block;
     .header-cart__icon {
-        width: 22px;
-        height: 17px;
-
-        background: url($img-path+"icons/icon-cart-header.png") center no-repeat;
-        @include image-2x($img-path+"icons/icon-cart-header@2x.png", 22px, 17px);
-
         display: inline-block;
-        margin-right: 0px;
+        position: relative;
+        width: 25px;
+        height: 21px;
+        line-height: normal;
+        vertical-align: middle;
+        margin-right: 7px;
+        background: url($img-path+"icons/icon-cart-header.png") center no-repeat;
+        @include image-2x($img-path+"icons/icon-cart-header@2x.png", 25px, 21px);
         @media (min-width: $screen-xs-min) {
             margin-right: 10px;
         }
         @media (min-width: $screen-sm-min) {
-            margin-right: 31px;
+            margin-right: 7px;
         }
     }
-    .header-cart__select {
-        height: 18px;
-        font-size: 18px;
-        .custom-select__button,
-        .custom-select__button .header-cart__select-label {
-            height: 18px;
-            color: $main-color_blue;
-            line-height: 18px;
-            vertical-align: top;
-            padding: 0;
-        }
-        .dropdown-menu {
-            left: auto;
-            right: 0;
-        }
-  
-        .header-cart__select-label {
-            display: inline-block;
-            overflow: hidden;
-            max-width: 85px;
-            @media (min-width: $screen-sm-min) {
-                max-width: 100%;
-            }
-        }
+    .header-cart__icon-number {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        font-size: 12px;
+        font-family: "Roboto";
+        color: rgb(255, 255, 255);
+        background-color: #f88901;
+        display: inline-block;
+        top: -5px;
+        right: -3px;
+        line-height: 15px;
+        text-align: center;
+        vertical-align: middle;
     }
 }
 
@@ -172,10 +180,10 @@ h2 {
 }
 
 .catalog {
-    >div{
-    @media (max-width: $screen-xs-min) {
-        width:100%;
-    }
+    >div {
+        @media (max-width: $screen-xs-min) {
+            width: 100%;
+        }
     }
     @media (min-width: $screen-xs-min) {
         &:first-child {
@@ -198,7 +206,6 @@ h2 {
     height: $catalog-item__height*2+18px;
     // border: 1px solid #666;
     & {
-         
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100%;
@@ -312,18 +319,18 @@ h2 {
         font: 400 18px / 24px Roboto;
     }
 }
-.category{
+
+.category {
     margin: 0 auto;
     @media (min-width: $screen-xs-min) {}
     @media (min-width: $screen-sm-min) {}
     @media (min-width: $screen-md-min) {}
     @media (min-width: $screen-lg-min) {}
     @media (min-width: $screen-xl-min) {}
-    &>div{
+    &>div {
         padding: 1px;
     }
     .category-item {
- 
         text-align: center;
         overflow: hidden;
         margin: 0 auto 18px;
@@ -331,15 +338,12 @@ h2 {
         background-color: #ffffff;
         width: $catalog-item__width;
         height: $catalog-item__height;
-     
         img {
             width: 100%;
             height: 100%;
             min-width: 100%;
             min-height: 100%;
-
         }
-
         .category-item__title {
             color: #ffffff;
             font: 300 40px / 48px Roboto;
@@ -348,10 +352,7 @@ h2 {
             left: 2%;
         }
     }
-    
-    
 }
-
 
 footer {
     position: absolute;
