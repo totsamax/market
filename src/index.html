@@ -53,23 +53,21 @@
             <div class="row header2">
                 <div class="col-xs-7 col-sm-6 col-md-6 ">
 
-                    <div class="dropdown custom-select header-cart__select">
-                        <button class="dropdown-toggle custom-select__button" type="button" id="cart-selector__select" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="header-cart__select-label overflow">Каталог товаров</span>
+                    <div class="dropdown custom-select header-category-selector pull-left">
+                        <button class="dropdown-toggle custom-select__button" type="button" id="header-category-selector__select" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="header-cart__select-label overflow">Каталог товаров</span>
                                 <span class="caret"></span>
                             </button>
-                        <ul class="dropdown-menu" aria-labelledby="cart-selector__select">
+                        <ul class="dropdown-menu" aria-labelledby="header-category-selector__select">
                             <li><a href="#">Категории</a></li>
                             <img src="https://www.google.ru/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="">
                         </ul>
                     </div>
-                    <!--<div class="span12">
-                        <form id="custom-search-form" class="form-search form-horizontal pull-right">
-                            <div class="input-append span12">
-                                <input type="text" class="search-query" placeholder="Search">
-                                <button type="submit" class="btn"><i class="icon-search"></i></button>
-                            </div>
-                        </form>
-                    </div>-->
+                    <form class="header-custom-search-form" >
+                        <input type="text" class="custom-search-form_text-input" placeholder="Поиск">
+                        <input type="submit" id="custom-search-form_submit-button" class="custom-search-form_submit-button">
+                        <lable for="custom-search-form_submit-button" class="glyphicon glyphicon-search header-search-icon custom-search-form_lable"></lable>
+                        <a href="header-sx-search"></a>
+                    </form>
 
                 </div>
                 <div class="col-xs-5 col-sm-6 col-md-6 content-rignt">

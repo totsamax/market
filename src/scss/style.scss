@@ -118,7 +118,52 @@ h2 {
 
 .header-login {
     margin-right: 35px;
- 
+    height: 40px;
+}
+
+.header-category-selector {
+    width: 160px;
+}
+
+.header-custom-search-form {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    line-height: 66px;
+    padding-left: 30px;
+    .custom-search-form_text-input {
+        width: 100%;
+        line-height: normal;
+        background-color: #e6e6e6;
+        border: 0;
+        padding: 11px 13px;
+        font-size: 18px;
+        color: rgb(153, 153, 153);
+        
+    }
+    .custom-search-form_text-input:focus{
+        box-shadow: none;
+        outline: none;
+        background: #fff;
+        color: #000;
+        border: $main-color_blue 2px solid;
+    }
+    .custom-search-form_submit-button {
+        display: none;
+    }
+    .custom-search-form_lable {
+        position: absolute;
+        display: block;
+        top: 19px;
+        right: 12px;
+        line-height: normal;
+        width: 23px;
+        height: 23px;
+        font-size: 23px;
+        cursor: pointer;
+    }
+    @media (min-width: $screen-xs-min) {}
+    @media (min-width: $screen-sm-min) {}
 }
 
 .header-cart {
